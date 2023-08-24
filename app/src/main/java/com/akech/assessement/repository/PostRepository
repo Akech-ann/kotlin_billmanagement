@@ -1,0 +1,30 @@
+package com.akech.assessement.repository
+
+import androidx.lifecycle.LiveData
+import com.akech.assessement.api.ApiClient
+import com.akech.assessement.api.ApiInterface
+import com.akech.assessement.model.Post
+import com.akech.assessement.model.RegisterRequest
+import com.akech.assessement.model.RegisterResponse
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+class PostViewModel : ViewModel() {
+        private val postRepository = PostRepository()
+        val posts: LiveData<List<Post>> = liveData {
+            val fetchedPosts = postRepository.getPosts()
+            emit(fetchedPosts)
+        }
+    }
+
+
+
+
+
+
+
+
+
+
