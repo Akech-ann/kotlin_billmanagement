@@ -35,10 +35,10 @@ class PostAdapter : RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
 
         // ViewHolder class
         class PostViewHolder(private val binding: ItemPostBinding) : RecyclerView.ViewHolder(binding.root) {
-            fun bind(post: Post) {
-                binding.titleTextView.text = post.title
-                binding.bodyTextView.text = post.body
-            }
+//            fun bind(post: Post) {
+//                binding.titleTextView.text = post.title
+//                binding.bodyTextView.text = post.body
+//            }
         }
     }
 
